@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="907.0" prefWidth="1700.0" styleClass="parent" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <AnchorPane prefHeight="907.0" prefWidth="125.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="1.0" layoutY="142.0" prefHeight="93.0" prefWidth="130.0" styleClass="sidebar-btn">
+               <children>
+                  <FontAwesomeIconView glyphName="CALCULATOR" onMouseClicked="#btnInvoice" size="65" styleClass="fontawesomeicon" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="265.0" prefHeight="93.0" prefWidth="130.0" styleClass="sidebar-btn">
+               <children>
+                  <FontAwesomeIconView glyphName="DATABASE" onMouseClicked="#btnInventary" size="65" styleClass="fontawesomeicon" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="795.0" prefHeight="93.0" prefWidth="130.0" styleClass="sidebar-btn" AnchorPane.bottomAnchor="0.0">
+               <children>
+                  <FontAwesomeIconView glyphName="GEAR" onMouseClicked="#btnSetting" size="65" styleClass="fontawesomeicon" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="26.0" prefHeight="93.0" prefWidth="130.0" styleClass="sidebar-btn">
+               <children>
+                  <FontAwesomeIconView glyphName="DASHBOARD" onMouseClicked="#btndashboard" size="65" styleClass="fontawesomeicon" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <BorderPane fx:id="borderpane" layoutX="131.0" prefHeight="907.0" prefWidth="1541.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="131.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane prefHeight="851.0" prefWidth="1515.0" stylesheets="@application.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox layoutX="28.0" layoutY="38.0" prefHeight="153.0" prefWidth="1565.0" spacing="30.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
+                     <children>
+                        <AnchorPane prefHeight="153.0" prefWidth="355.0" style="-fx-background-color: WHITE;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <AnchorPane prefHeight="168.0" prefWidth="181.0" style="-fx-background-color: #00bfec;">
+                                 <children>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="LINE_CHART" layoutX="51.0" layoutY="109.0" size="70" />
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="188.0" layoutY="40.0" text="Sales">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="sales" layoutX="188.0" layoutY="75.0" text="13">
+                                 <font>
+                                    <Font name="System Bold" size="36.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="153.0" prefWidth="355.0" style="-fx-background-color: WHITE;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <AnchorPane prefHeight="168.0" prefWidth="181.0" style="-fx-background-color: #e91e60;">
+                                 <children>
+                                    <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR" layoutX="53.0" layoutY="115.0" size="80" text="" />
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="190.0" layoutY="37.0" text="Products Sold">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="productsold" layoutX="190.0" layoutY="72.0" text="13">
+                                 <font>
+                                    <Font name="System Bold" size="36.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="153.0" prefWidth="355.0" style="-fx-background-color: WHITE;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <AnchorPane prefHeight="168.0" prefWidth="181.0" style="-fx-background-color: #00a658;">
+                                 <children>
+                                    <ImageView fitHeight="93.0" fitWidth="105.0" layoutX="44.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@list_50px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="190.0" layoutY="37.0" prefHeight="35.0" prefWidth="166.0" text="Active Products">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="activeproducts" layoutX="196.0" layoutY="72.0" text="13">
+                                 <font>
+                                    <Font name="System Bold" size="36.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="153.0" prefWidth="355.0" style="-fx-background-color: WHITE;" HBox.hgrow="ALWAYS">
+                           <children>
+                              <AnchorPane prefHeight="168.0" prefWidth="181.0" style="-fx-background-color: #f19b10;">
+                                 <children>
+                                    <ImageView fitHeight="93.0" fitWidth="105.0" layoutX="44.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@receive_cash_50px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="186.0" layoutY="38.0" text="Today's Revenue">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="todaysrevenue" layoutX="192.0" layoutY="73.0" text="13">
+                                 <font>
+                                    <Font name="System Bold" size="36.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+                  <LineChart fx:id="lineRevenueChart" layoutX="14.0" layoutY="286.0" prefHeight="512.0" prefWidth="745.0" title="Revenue per month" AnchorPane.bottomAnchor="109.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="810.0" AnchorPane.topAnchor="286.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <BarChart fx:id="salesbarChart" layoutX="773.0" layoutY="286.0" prefHeight="512.0" prefWidth="787.0" title="Sales per month" AnchorPane.bottomAnchor="109.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="286.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@application.css" />
+      <URL value="@application.css" />
+   </stylesheets>
+</AnchorPane>

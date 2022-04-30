@@ -1,0 +1,67 @@
+.parent{
+	-fx-background-color:  #ecf0f4;
+}
+.sidebar{
+    -fx-background-color:#203039;
+}
+.fontawesomeicon{
+	-fx-fill:GRAY;
+}
+.sidebar-btn{
+	-fx-background-color:transparent;
+}
+.sidebar-btn:hover{
+	-fx-border-color:#258ED9;
+	-fx-border-width:0px 0px 0px 5px; 
+}
+
+
+
+
+
+.table-view .column-header-background{
+	-fx-background-color: WHITE;
+	-fx-background-insets: 0 0 10 0;
+	-fx-padding: 0 0 10 0;
+	
+}
+.table-view .column-header-background .label{
+	-fx-text-fill: WHITE;
+}
+
+.table-view .column-header, .table-view .filler{
+	-fx-size: 40;
+	-fx-background-color:  #00cc44;
+}
+
+.info1{
+	-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);
+	
+	-fx-background-color: WHITE;
+}
+
+.btnMinus{
+	-fx-background-color:  #203039;
+}
+.btnMinus:hover{
+	-fx-border-color: #258ED9;
+}
+
+
+
+
+.scroll-pane{
+	-fx-background-color:#ecf0f4;
+}
+
+.scroll-bar:vertical .track{
+	-fx-background-color: #f4f4f4;
+}
+
+.scroll-bar:vertical .thumb{
+	-fx-background-color: #203039;
+}
+
+.scroll-pane:hover{
+	-fx-border-color: #203039;
+}

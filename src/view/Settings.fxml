@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="870.0" prefWidth="1372.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SettingsController">
+   <children>
+      <Label layoutX="44.0" layoutY="40.0" prefHeight="35.0" prefWidth="158.0" text="Setting">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="135.0" text="User Information" textFill="#b7472a">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="userimage" fitHeight="101.0" fitWidth="134.0" layoutX="44.0" layoutY="177.0" onMouseClicked="#changeuserimage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@male_user_60px.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelusername" layoutX="156.0" layoutY="198.0" prefHeight="30.0" prefWidth="265.0" text="User Name">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelshopname" layoutX="156.0" layoutY="228.0" prefHeight="30.0" prefWidth="265.0" text="Shop Name">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtusername" editable="false" focusColor="#b7472a" layoutX="39.0" layoutY="395.0" prefHeight="31.0" prefWidth="336.0" promptText="User Name" />
+      <JFXPasswordField fx:id="txtpassword" editable="false" focusColor="#b7472a" layoutX="39.0" layoutY="453.0" prefHeight="31.0" prefWidth="336.0" promptText="Password" />
+      <FontAwesomeIconView fill="#b7472a" glyphName="EDIT" layoutX="315.0" layoutY="355.0" onMouseClicked="#btninfochangeclicked" size="40" />
+      <JFXButton layoutX="260.0" layoutY="745.0" onAction="#btnsaveclicked" prefHeight="55.0" prefWidth="265.0" ripplerFill="#b7472a" text="Save">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="44.0" layoutY="323.0" prefHeight="36.0" prefWidth="265.0" text="Change Information" textFill="#b7472a">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtshopname" editable="false" focusColor="#b7472a" layoutX="39.0" layoutY="513.0" prefHeight="31.0" prefWidth="336.0" promptText="User Name" text="Shop Name" />
+      <JFXTextField fx:id="txtshoplogo" editable="false" focusColor="#b7472a" layoutX="37.0" layoutY="682.0" prefHeight="31.0" prefWidth="488.0" promptText="Path " />
+      <FontAwesomeIconView fill="#b7472a" glyphName="EDIT" layoutX="525.0" layoutY="699.0" onMouseClicked="#btnchangeshopimage" size="40" text="" />
+      <Label layoutX="35.0" layoutY="629.0" prefHeight="36.0" prefWidth="265.0" text="Receipt logo" textFill="#b7472a">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="508.0" fitWidth="511.0" layoutX="633.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@supermarket.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="593.0" layoutY="134.0" text="Product Information" textFill="#b7472a">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="593.0" layoutY="184.0" prefHeight="35.0" prefWidth="158.0" text="S-Pos" textFill="#b7472a">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="593.0" layoutY="264.0" prefHeight="36.0" prefWidth="223.0" text="v0.0.1" textFill="#b7472a">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <JFXToggleButton fx:id="togglebtn" layoutX="20.0" layoutY="730.0" size="15.0" text="Make secure" toggleColor="#b7472a" toggleLineColor="#d97259" />
+      <JFXTextField fx:id="counter_number" editable="false" focusColor="#b7472a" layoutX="39.0" layoutY="572.0" prefHeight="31.0" prefWidth="336.0" promptText="Counter Number" />
+   </children>
+</AnchorPane>
